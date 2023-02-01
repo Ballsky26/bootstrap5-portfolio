@@ -3,18 +3,18 @@
     font-size: 30px;
 }
 
-.navbar {
-    position: relative;
-    z-index: 1;
-}
 
 .jumbotron {
-    padding-top: 50px;
+    padding-top: 100px;
     background-color: #e2edff;
 }
 
 .projects {
     background-color: #e2edff;
+}
+
+section {
+    padding-top: 5em;
 }
 
 
@@ -48,6 +48,10 @@
 
     .projects {
         background-color: #e2edff;
+    }
+
+    section {
+        padding-top: 5em;
     }
 
 }
