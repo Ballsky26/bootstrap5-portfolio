@@ -1,12 +1,18 @@
 .navbar-brand {
     font-family: Viga;
-    font-size: 32px;
+    font-size: 30px;
 }
 
 .navbar {
     position: relative;
     z-index: 1;
 }
+
+.jumbotron {
+    padding-top: 50px;
+    background-color: #e2edff;
+}
+
 
 /* DESKTOP VERSION */
 @media (min-width: 992px) {
@@ -33,7 +39,8 @@
     }
 
     .jumbotron {
-        padding: 2rem 1rem;
         background-color: #e2edff;
     }
+
+
 }
