@@ -13,6 +13,10 @@
     background-color: #e2edff;
 }
 
+.projects {
+    background-color: #e2edff;
+}
+
 
 /* DESKTOP VERSION */
 @media (min-width: 992px) {
@@ -39,6 +43,10 @@
     }
 
     .jumbotron {
+        background-color: #e2edff;
+    }
+
+    .projects {
         background-color: #e2edff;
     }
 
