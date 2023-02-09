@@ -265,13 +265,14 @@
         </div>
         <div class="row">
           <div class="col-lg-12">
-            <form>
+            <form name="contact-form">
               <div class="mb-3">
-                <label for="name" class="form-label">Nama Lengkap</label>
+                <label for="nama" class="form-label">Nama Lengkap</label>
                 <input
-                  type="name"
+                  type="nama"
+                  name="nama"
                   class="form-control"
-                  id="name"
+                  id="nama"
                   placeholder="Masukkan Nama Anda"
                 />
               </div>
@@ -279,23 +280,21 @@
                 <label for="email" class="form-label">Email</label>
                 <input
                   type="email"
+                  name="email"
                   class="form-control"
                   id="email"
                   placeholder="Masukkan Email Anda"
                 />
               </div>
               <div class="mb-3">
-                <label for="notelp" class="form-label">Nomor Telepon</label>
-                <input
-                  type="number"
+                <label for="pesan" class="form-label">Pesan</label>
+                <textarea
                   class="form-control"
-                  id="notelp"
-                  placeholder="Masukkan Nomor Anda"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="message" class="form-label">Pesan</label>
-                <textarea class="form-control" id="message" rows="3"></textarea>
+                  name="pesan"
+                  id="pesan"
+                  rows="3"
+                  placeholder="Masukkan pesan Anda"
+                ></textarea>
               </div>
               <button type="submit" class="btn btn-primary">Kirim</button>
             </form>
@@ -329,5 +328,17 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbytomW91zr3FBQ1dHiHqtjSqmscTKT2G3V3iCz_VXSb8xIe7W26RhlcGu3pHwGQTdks/exec";
+      const form = document.forms["contact-form"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
