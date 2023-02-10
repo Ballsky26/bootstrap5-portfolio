@@ -17,6 +17,13 @@ section {
     padding-top: 5em;
 }
 
+.gallery-img {
+    width: 100%;
+}
+
+#gallery .row>* {
+    padding: 0;
+}
 
 /* DESKTOP VERSION */
 @media (min-width: 992px) {
@@ -52,6 +59,10 @@ section {
 
     section {
         padding-top: 5em;
+    }
+
+    .gallery-img {
+        width: 100%;
     }
 
 }
