@@ -277,6 +277,58 @@
           </div>
         </div>
       </div>
+      <section id="my-gamepad">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h2 class="text-center">My Gamepad</h2>
+              <hr class="border border-dark" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="gamepad-box">
+                <h4 class="gamepad-name">Gamepad PS3</h4>
+                <img
+                  src="img/gallery/gamepad/3.png"
+                  alt="Gamepad DS3"
+                  class="gamepad-img"
+                />
+                <a href="" class="btn btn-light gamepad-detail-button"
+                  >Show Details</a
+                >
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="gamepad-box">
+                <h4 class="gamepad-name">Gamepad PS4</h4>
+                <img
+                  src="img/gallery/gamepad/2.png"
+                  alt="Gamepad DS4"
+                  class="gamepad-img"
+                />
+                <a href="" class="btn btn-light gamepad-detail-button"
+                  >Show Details</a
+                >
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="gamepad-box">
+                <h4 class="gamepad-name">Gamepad PS5</h4>
+                <img
+                  src="img/gallery/gamepad/1.png"
+                  alt="Gamepad DS5"
+                  class="gamepad-img"
+                />
+                <a href="" class="btn btn-light gamepad-detail-button"
+                  >Show Details</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -483,6 +535,7 @@
           </div>
         </div>
       </div>
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#0dcaf0"
@@ -585,6 +638,13 @@
             console.log("Success!", response);
           })
           .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+    <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".gamepad-box"), {
+        max: 25,
+        speed: 400,
       });
     </script>
   </body>

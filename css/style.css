@@ -25,6 +25,96 @@ section {
     padding: 0;
 }
 
+/* Gamepad Section */
+.gamepad-box {
+    position: relative;
+    background-color: #0dcaf0;
+    border-radius: 10px;
+    height: 500px;
+    transform-style: preserve-3d;
+}
+
+.gamepad-box::before {
+    content: 'MY';
+    position: absolute;
+    color: #fff;
+    font-size: 6em;
+    font-weight: bold;
+    font-style: italic;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.gamepad-box:hover::before {
+    opacity: 0.2;
+}
+
+.gamepad-box::after {
+    content: 'GAMEPAD';
+    position: absolute;
+    color: #fff;
+    font-size: 4.3em;
+    font-weight: bold;
+    font-style: italic;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.gamepad-box:hover::after {
+    opacity: 0.2;
+}
+
+.gamepad-name {
+    position: absolute;
+    color: #fff;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translate3d(0, 0, 50px);
+}
+
+.gamepad-box:hover .gamepad-name {
+    top: 20px;
+    opacity: 1;
+}
+
+.gamepad-detail-button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 100px);
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 3;
+}
+
+.gamepad-box:hover .gamepad-detail-button {
+    opacity: 1;
+    bottom: 20px;
+}
+
+.gamepad-img {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate3d(-50%, -52%, 80px);
+    max-width: 400px;
+    transition: 0.5s;
+}
+
+.gamepad-box:hover .gamepad-img {
+    transform: translate3d(-50%, -52%, 100px)rotate(5deg) scale(1.2);
+}
+
 /* DESKTOP VERSION */
 @media (min-width: 992px) {
 
@@ -63,6 +153,96 @@ section {
 
     .gallery-img {
         width: 100%;
+    }
+
+    /* Gamepad Section */
+    .gamepad-box {
+        position: relative;
+        background-color: #0dcaf0;
+        border-radius: 10px;
+        height: 500px;
+        transform-style: preserve-3d;
+    }
+
+    .gamepad-box::before {
+        content: 'MY';
+        position: absolute;
+        color: #fff;
+        font-size: 6em;
+        font-weight: bold;
+        font-style: italic;
+        top: 30px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .gamepad-box:hover::before {
+        opacity: 0.2;
+    }
+
+    .gamepad-box::after {
+        content: 'GAMEPAD';
+        position: absolute;
+        color: #fff;
+        font-size: 4.3em;
+        font-weight: bold;
+        font-style: italic;
+        top: 350px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .gamepad-box:hover::after {
+        opacity: 0.2;
+    }
+
+    .gamepad-name {
+        position: absolute;
+        color: #fff;
+        top: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 2em;
+        opacity: 0;
+        transition: 0.5s;
+        transform: translate3d(0, 0, 50px);
+    }
+
+    .gamepad-box:hover .gamepad-name {
+        top: 20px;
+        opacity: 1;
+    }
+
+    .gamepad-detail-button {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate3d(-50%, 0, 100px);
+        opacity: 0;
+        transition: 0.5s;
+        z-index: 3;
+    }
+
+    .gamepad-box:hover .gamepad-detail-button {
+        opacity: 1;
+        bottom: 20px;
+    }
+
+    .gamepad-img {
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        transform: translate3d(-50%, -52%, 80px);
+        max-width: 400px;
+        transition: 0.5s;
+    }
+
+    .gamepad-box:hover .gamepad-img {
+        transform: translate3d(-50%, -52%, 100px)rotate(5deg) scale(1.2);
     }
 
 }
